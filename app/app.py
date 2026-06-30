@@ -92,7 +92,7 @@ LABELS = ["Grossesses", "Glucose", "Tension", "Épaisseur peau",
 
 with st.sidebar:
     st.markdown("### DiabètePredict CI")
-    st.markdown("Projet ECP — Coding Academy C-DAT-900")
+    st.markdown("Projet ECP — Coding Academy by Epitech")
     st.divider()
     st.markdown("**Dataset**")
     st.markdown("- Source : Pima Indians Diabetes\n- 768 patientes\n- 8 variables cliniques\n- Classification binaire")
@@ -100,13 +100,13 @@ with st.sidebar:
     st.markdown("**Modèle**")
     st.markdown("- Random Forest\n- Précision : 77.9%\n- AUC : 0.818")
     st.divider()
-    st.caption("Djamilat Diarrassouba — 2026")
+    st.caption("Djamilat Chemminla Diarrassouba — 2026")
 
 
 st.markdown("""
 <div class="header">
     <h1>DiabètePredict CI</h1>
-    <p>Prédiction du risque de diabète à partir de données cliniques — Projet ECP · Coding Academy</p>
+    <p>Prédiction du risque de diabète à partir de données cliniques — Projet ECP · Coding Academy by Epitech</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -206,11 +206,11 @@ with col2:
                 ax.set_xlabel("Importance", color="#aaa")
                 ax.tick_params(colors="#ccc")
                 ax.spines[:].set_color("#333")
-                ax.set_title("Importance des variables (Random Forest)", color="white", fontsize=10)
+                ax.set_title("Importance des variables", color="white", fontsize=10)
                 st.pyplot(fig)
                 plt.close()
             else:
-                st.info("Graphique disponible uniquement avec Random Forest.")
+                st.info("Graphique disponible.")
 
         with tab2:
             st.markdown("**Comparaison de vos valeurs avec les moyennes du dataset (768 patientes)**")
@@ -262,8 +262,7 @@ with col2:
 3. Un score de probabilité de diabète est calculé
 4. Le résultat s'affiche avec une recommandation
 
-Modèle entraîné sur 768 patientes — Précision : 77.9% — AUC : 0.818
-        """)
+Modèle entraîné sur 768 patientes """)
 
 st.divider()
-st.caption("DiabètePredict CI — Projet ECP | Djamilat Diarrassouba | Coding Academy C-DAT-900 | 2026")
+st.caption("DiabètePredict CI — Projet ECP | Djamilat Chemminla Diarrassouba | Coding Academy by Epitech | 2026")
