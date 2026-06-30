@@ -3,14 +3,17 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import joblib
+import os
 
 st.set_page_config(page_title="DiabètePredict CI", page_icon=" ", layout="wide", initial_sidebar_state="expanded")
 
 @st.cache_resource
 def charger_modele():
-    modele = joblib.load("../model/meilleur_modele.pkl")
-    scaler = joblib.load("../model/scaler.pkl")
-    return modele,scaler
+    base = os.path.dirname(os.path.abspath(__file__))
+    modele = joblib.load(os.path.join(base, '..', 'model', 'meilleur_modele.pkl'))
+    scaler = joblib.load(os.path.join(base, '..', 'model', 'scaler.pkl'))
+    return modele, scaler
+
 
 modele, scaler = charger_modele()
 
